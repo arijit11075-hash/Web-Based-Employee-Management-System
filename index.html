@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="img-box">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAACUCAMAAADPj7eyAAAA/FBMVEX////j6+7I2+IAurxdysr4+fpWzs9Hx8no7vGr190Xu75mepaQ0ddzlasEVnsUV31KcpAMcI1gj6UNQW9x1dU5w8Xr6u6s0do9vcNaWnwQFVhpu8IAm6nQ7+8AeZIiqLADOmuOkqmK1dlTsbohkKF8jKMdSHN70tLS6OsahZ0AIV1CobEAiJuJ2djU4ueezNQAAEbl9va66Omg4OCDobRjgpwATndry9C7x9Gew82jqruYnbC2u8l1s74AZocALGQAC1Vhna8iLGIhIluKtcFuc5B/f5hZaIk1fZdFjqOit8Xb2+OKxM1gqbZFRnAiOGo3VX2OjpdraXhcXHIroj3OAAAEjElEQVR4nO3YbVfaSByG8ZAQCGmsIkKoEkCMEh5Ek7g8SEFRrFCwbtvv/132PzMkRbruCscKx3P/XmGInFxMMpMgSQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADviepann/qe5blqus+ltdm+eXY3t5eiRie867yXH9PKBkUZxiJyLqP6PVYMZFWLlOcwSSc+ffL6XR0iY+72Nn565WPcHVePBYL40Rb4kldVFHiS3ze1sftndc+xlVZ1BaL8rbWr7j5uqiiLxXXbG5KnBuN8ThKa7X4FcfbTFMLd1kyTm63269/nCvxYzyOhq5My4CT4G0mxZnhLotxrucbnju3QTM7HZmmWFWdn2fZH5PL7ufMHy54nhWbxbUst9RqnVpOQgycaTaCfZ7GuVGlwLSCPLVXr1Qq+UpbTvZ3teC0VD9cPXaPq9Xq9XX3jZsC6mnYZmSzdGLqZVcWbaYcDMOTOEvX9YIgLkunVrfr1JbPD0Yijk8o6odUKlW8qlZvbs8P11BG3Fg8Hqe2qGUUpnwyybYccxYXXHXzcZau6HqLdqO4I1YXebDtem04HFTyyWRyMe6ue3dze7v/eS1xlp5Op+PZeMkpHMxkfYfCmGApn4tzozRwPp2QbonqpjS2Z7ZtDzWVrrvKb3HFbkbKdCnuy1rifIXi0lndOsgdhSJy47k4T1eUknh5xE9Mt2bbNbHBzC/EFe/ZXJL5tL//aS2Tymmax2VdO1djxLUkC43ZRTcXV9KV+GwicQuFXEJy6KScLYnq7mLcMd/+5XqdcVmKq9MA1Gq5XO4/49Syood3YhR3Jpk5ux5suPgtjn/A4TpHjtoKbp3qGMrLuSvGDTctTs8yBW+Yp7VK9PU059m4U7rNDFaIxdNSGmxYnMfjaFaP5FkdC6ybqhbhM0qwis9PKIqi+OJlKZxQHsQGebRhcRYroyHIndGhib4OtUU0TWvMzZZK2rWIK7lxeu3RNtWjfztwJXVKY82WBKmxu7gUrDvO5W0UlzNlmg/oLoONm6DN3aHofFYts6Gj14bvG+zfLEks4navY3bGyU2LU41ZHPv6d/vJUSRsi4SPBSyOTkddYXOJr4T3Xwn+rkMnJr+5TI5HmxVH56UYONuWv37s9/sD6d/iZvhE6aVFnR7MI1qtXmdtw84ouUU5W6kTFnd3VZ3FnZ+vKU4yRFtN/rpN+s2tYOh+HY8VEn975eiBIc/eZI858vBhMGyw2XJIWyJiKprIkwnfY0LW9JOTeyTG7fJkm/t4oYm6lx2PNp1Oh2KMaeBG8v/s/tYc1uZcpk6azSbPu+Bj98LvWp3SA8+D6UTkIa0Egz97qCtwcrbVLaZOhO3t5pb04jYaOjZb2uMxPc8lkxv4g2fE6e4/Pj7S85foK+5ISxyl2rPrfLbMDzawjZ5KDr/tV2+or8geMIt/Hy93lE5vMB4Pept2vYUm3fub6yrzeN9d/rcrbW7h2Cw0mWcyk/bl9x8/f/74ftmeZDKaupFn2GqoT9W0DKOp6nsqAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgLf3D07zn69pecWjAAAAAElFTkSuQmCC" alt="Login Logo" class="login-img">
+        </div>
+        <h2>System Login</h2>
+        <form id="loginForm">
+            <label>Select Role:</label>
+            <select id="roleSelect">
+                <option value="manager">Manager</option>
+                <option value="employee">Employee</option>
+            </select>
+            <label>Email:</label>
+            <input type="email" id="email" required placeholder="Enter Your Email">
+
+            <label>Password:</label>
+            <input type="password" id="password" required placeholder="Enter Password">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
