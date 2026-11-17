@@ -1,28 +1,36 @@
-*{
+/* Universal Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI''Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    background: linear-gradient(135deg,#0f127a 0%,#1e293b 100%);
-    display:flex;
+
+/* Base Body Styles */
+body {
+    background: linear-gradient(135deg, midnightblue 0%, darkslategray 100%);
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    touch-action: none; 
+    touch-action: none;
     overflow: hidden;
+    color: white;
 }
-.login-container{
-    width:400px;
-    padding:40px 30px;
-    background: #ffffff;
+
+/* Login Container Styles */
+.login-container {
+    width: 400px;
+    padding: 40px 30px;
+    background: white;
     border-radius: 12px;
     transition: transform 0.10s ease;
 }
-    .login-container:hover {
+
+.login-container:hover {
     transform: translateY(-8px);
 }
+
 .img-box {
     text-align: center;
     margin-bottom: 20px;
@@ -33,50 +41,53 @@ body{
     height: 65px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 128, 0.2);
 }
+
 .login-container h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #0f172a;
+    color: midnightblue;
     font-size: 24px;
     font-weight: 700;
 }
+
 .login-container label {
     display: block;
     margin-top: 15px;
     font-weight: 600;
-    color: #475569;
+    color: slategray;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
 .login-container input, 
 .login-container select {
     width: 100%;
     padding: 12px;
     margin-top: 6px;
-    border: 1.5px solid #e2e8f0;
+    border: 1.5px solid lightgray;
     border-radius: 6px;
     font-size: 14px;
-    color: #1e293b;
-    background-color: #f8fafc;
+    color: darkslategray;
+    background-color: ghostwhite;
     transition: all 0.3s ease;
 }
 
 .login-container input:focus, 
 .login-container select:focus {
     outline: none;
-    border-color: #2563eb;
-    background-color: #ffffff;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: dodgerblue;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
 }
+
 .login-container button {
     width: 100%;
     padding: 12px;
     margin-top: 25px;
-    background: #2563eb;
+    background: dodgerblue;
     color: white;
     border: none;
     border-radius: 6px;
@@ -87,5 +98,198 @@ body{
 }
 
 .login-container button:hover {
-    background: #1d4ed8;
+    background: royalblue;
+}
+
+
+/* --- Manager Dashboard Layout Styles --- */
+
+.dashboard-body {
+    margin: 0;
+    display: flex;
+    background: linear-gradient(135deg, midnightblue 0%, darkslategray 100%);
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: rgba(20, 30, 50, 0.7);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h2 {
+    font-size: 1.4rem;
+    color: deepskyblue;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: lightgray;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a:hover, 
+.sidebar ul li a.active {
+    background: deepskyblue;
+    color: white;
+}
+
+.sidebar .logout-btn {
+    margin-top: auto;
+    background: rgba(220, 20, 60, 0.2);
+    color: lightcoral;
+}
+
+.sidebar .logout-btn:hover {
+    background: crimson;
+    color: white;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.top-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.top-header p {
+    color: lightgray;
+    margin-bottom: 25px;
+}
+
+/* Stats Cards */
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    color: lightgray;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+/* Table Container */
+.table-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.add-btn {
+    background: deepskyblue;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.add-btn:hover {
+    background: dodgerblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    color: lightgray;
+    font-weight: 600;
+}
+
+td {
+    color: whitesmoke;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.action-btn.edit {
+    background: rgba(0, 191, 255, 0.2);
+    color: deepskyblue;
+}
+
+.action-btn.delete {
+    background: rgba(220, 20, 60, 0.2);
+    color: lightcoral;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
 }

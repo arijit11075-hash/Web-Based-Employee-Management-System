@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Manager Dashboard - Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Manager Panel</h2>
+        <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Leave Requests</a></li>
+            <li><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <h1>Welcome, Manager</h1>
+            <p>Here is the overview of your company employees.</p>
+        </header>
+
+        <!-- Stats Cards Section -->
+        <section class="stats-container">
+            <div class="stat-card">
+                <h3>Total Employees</h3>
+                <p class="stat-number">24</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending Leave Requests</h3>
+                <p class="stat-number">3</p>
+            </div>
+            <div class="stat-card">
+                <h3>Present Today</h3>
+                <p class="stat-number">21</p>
+            </div>
+        </section>
+
+        <!-- Employee Table Section -->
+        <section class="table-container">
+            <div class="table-header">
+                <h2>Employee List</h2>
+                <button class="add-btn">+ Add Employee</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#EMP-101</td>
+                        <td>Rahim Ahmed</td>
+                        <td>rahim@company.com</td>
+                        <td>Development</td>
+                        <td><button class="action-btn edit">Edit</button> <button class="action-btn delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>#EMP-102</td>
+                        <td>Sadia Islam</td>
+                        <td>sadia@company.com</td>
+                        <td>UI/UX Design</td>
+                        <td><button class="action-btn edit">Edit</button> <button class="action-btn delete">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>#EMP-103</td>
+                        <td>Tanvir Hossain</td>
+                        <td>tanvir@company.com</td>
+                        <td>Marketing</td>
+                        <td><button class="action-btn edit">Edit</button> <button class="action-btn delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
