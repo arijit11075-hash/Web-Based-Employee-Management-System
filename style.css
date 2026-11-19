@@ -285,3 +285,59 @@ td {
 .action-btn:hover {
     opacity: 0.85;
 }
+
+/* --- Minimal Styles for Supervisor --- */
+.hidden {
+    display: none;
+}
+
+.supervisor-badge {
+    background: darkslateblue;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid slateblue;
+}
+
+.sup-name {
+    color: deepskyblue;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.sup-email {
+    color: lightgray;
+    font-size: 0.8rem;
+    margin-top: 3px;
+}
+
+.stat-text {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: deepskyblue;
+    margin-top: 5px;
+}
+
+.stat-subtext {
+    font-size: 0.82rem;
+    color: lightgray;
+    margin-top: 3px;
+    display: block;
+}
+
+/* validation borders and error text */
+.error {
+    color: crimson;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+.errorBorder {
+    border: 1.5px solid crimson !important;
+}
+
+.successBorder {
+    border: 1.5px solid mediumseagreen !important;
+}
