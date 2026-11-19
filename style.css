@@ -6,19 +6,18 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Base Body Styles */
+/* Login Page Body */
 body {
     background: linear-gradient(135deg, midnightblue 0%, darkslategray 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    touch-action: none;
     overflow: hidden;
     color: white;
 }
 
-/* Login Container Styles */
+/* Login Container */
 .login-container {
     width: 400px;
     padding: 40px 30px;
@@ -41,7 +40,7 @@ body {
     height: 65px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 128, 0.2);
+    border: 2px solid midnightblue;
 }
 
 .login-container h2 {
@@ -80,7 +79,6 @@ body {
     outline: none;
     border-color: dodgerblue;
     background-color: white;
-    box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.2);
 }
 
 .login-container button {
@@ -101,9 +99,7 @@ body {
     background: royalblue;
 }
 
-
-/* --- Manager Dashboard Layout Styles --- */
-
+/* Manager Dashboard Layout (Starts Here) */
 .dashboard-body {
     margin: 0;
     display: flex;
@@ -112,19 +108,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     overflow: hidden;
-    touch-action: none;
 }
 
 /* Sidebar */
 .sidebar {
     width: 260px;
-    background: rgba(20, 30, 50, 0.7);
-    backdrop-filter: blur(12px);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: midnightblue;
+    border-right: 1px solid slategray;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    border-radius: 8px;
 }
 
 .sidebar h2 {
@@ -160,13 +153,13 @@ body {
 
 .sidebar .logout-btn {
     margin-top: auto;
-    background: rgba(220, 20, 60, 0.2);
-    color: lightcoral;
+    background: darkred;
+    color: white;
+    text-align: center;
 }
 
 .sidebar .logout-btn:hover {
     background: crimson;
-    color: white;
 }
 
 /* Main Content Area */
@@ -195,13 +188,11 @@ body {
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: darkslateblue;
+    border: 1px solid slateblue;
     padding: 20px;
     border-radius: 12px;
     flex: 1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card h3 {
@@ -218,9 +209,8 @@ body {
 
 /* Table Container */
 .table-container {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: darkslateblue;
+    border: 1px solid slateblue;
     padding: 20px;
     border-radius: 12px;
 }
@@ -260,7 +250,7 @@ table {
 
 th, td {
     padding: 12px 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid slateblue;
 }
 
 th {
@@ -272,24 +262,26 @@ td {
     color: whitesmoke;
 }
 
+/* Table Action Buttons */
 .action-btn {
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .action-btn.edit {
-    background: rgba(0, 191, 255, 0.2);
-    color: deepskyblue;
+    background: dodgerblue;
+    color: white;
 }
 
 .action-btn.delete {
-    background: rgba(220, 20, 60, 0.2);
-    color: lightcoral;
+    background: crimson;
+    color: white;
 }
 
 .action-btn:hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }

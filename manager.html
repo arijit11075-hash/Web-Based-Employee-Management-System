@@ -8,13 +8,13 @@
 </head>
 <body class="dashboard-body">
 
-    <!-- Sidebar Navigation -->
+    <!-- Sidebar Menu -->
     <aside class="sidebar">
         <h2>Manager Panel</h2>
         <ul>
-            <li><a href="#" class="active">Dashboard</a></li>
-            <li><a href="#">Employees</a></li>
-            <li><a href="#">Leave Requests</a></li>
+            <li><a href="#" class="active" onclick="showTab('dashboard', this)">Dashboard</a></li>
+            <li><a href="#" onclick="showTab('employees', this)">Employees</a></li>
+            <li><a href="#" onclick="showTab('leaves', this)">Leave Requests</a></li>
             <li><a href="index.html" class="logout-btn">Logout</a></li>
         </ul>
     </aside>
@@ -28,7 +28,7 @@
         </header>
 
         <!-- Stats Cards Section -->
-        <section class="stats-container">
+        <section id="statsBox" class="stats-container">
             <div class="stat-card">
                 <h3>Total Employees</h3>
                 <p class="stat-number">24</p>
@@ -44,7 +44,7 @@
         </section>
 
         <!-- Employee Table Section -->
-        <section class="table-container">
+        <section id="empBox" class="table-container">
             <div class="table-header">
                 <h2>Employee List</h2>
                 <button class="add-btn">+ Add Employee</button>
@@ -80,6 +80,46 @@
                         <td>tanvir@company.com</td>
                         <td>Marketing</td>
                         <td><button class="action-btn edit">Edit</button> <button class="action-btn delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Leave Requests Section (Hidden by default) -->
+        <section id="leaveBox" class="table-container" style="display: none;">
+            <div class="table-header">
+                <h2>Leave Requests</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Days</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rahim Ahmed</td>
+                        <td>2 Days</td>
+                        <td>Sick Leave</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="action-btn edit" onclick="changeStatus(this, 'Approved')">Approve</button>
+                            <button class="action-btn delete" onclick="changeStatus(this, 'Rejected')">Reject</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sadia Islam</td>
+                        <td>1 Day</td>
+                        <td>Personal Work</td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="action-btn edit" onclick="changeStatus(this, 'Approved')">Approve</button>
+                            <button class="action-btn delete" onclick="changeStatus(this, 'Rejected')">Reject</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
